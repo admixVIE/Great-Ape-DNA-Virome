@@ -1,0 +1,102 @@
+##Dry-lab Master thesis
+
+##Quality control, trimming, and assigning taxa
+
+module load conda fastqc trimmomatic
+module load trimmomatic
+module load fastqc
+source /apps/miniconda/4.8.3/etc/profile.d/conda.sh
+
+run_date=$(date +"%Y%m%d")
+threads="8"
+
+
+for i in $(find -name "*_R1_001.fastq.gz" -exec readlink -f {} \;); do
+
+    sampleID=$(echo ${i} | awk -F"_R1_001.fastq.gz" '{print $1}')
+    shortID=$(echo ${sampleID} | awk -F"/" '{print $NF}')
+
+    mkdir ${sampleID}_{run_date}_LOGS
+
+    fastqc ${i} -t 2 --outdir ${sampleID}_{run_date}_LOGS
+
+    trimmomatic SE -threads ${threads} ${i} ${sampleID}_trimmed_q10_minlen30.fastq.gz ILLUMINACLIP:/#scratch/students/CMEG-22S/haemmerle/sequencing_runs/sequencing_05.10/TruSeq3-PE-2.fa:2:30:10:1:true #LEADING:10 TRAILING:10 MINLEN:30 2>&1 | tee ${sampleID}_{run_date}_LOGS/${shortID}#_Trimmomatic_{run_date}.log
+
+    fastqc ${sampleID}_trimmed_q10_minlen30.fastq.gz -t 2 --outdir ${sampleID}_{run_date}_LOGS
+
+    conda activate bbmap-39.01
+
+    clumpify.sh in=${sampleID}_trimmed_q10_minlen30.fastq.gz out=${sampleID}#_trimmed_q10_minlen30_dedup.fastq.gz dedupe=t dupedist=12000 spantiles=t 2>&1 | tee ${sampleID}#_{run_date}_LOGS/${shortID}_clumpify_${run_date}.log
+
+    fastqc ${sampleID}_trimmed_q10_minlen30_dedup.fastq.gz -t 2 --outdir ${sampleID}_{run_date}_LOGS
+
+    conda activate kraken2-2.1.2
+    
+    kraken2 ${sampleID}_trimmed_q10_minlen30_dedup.fastq.gz\
+                  --threads ${threads} \
+                  --db /scratch/students/CMEG-22S/haemmerle/database/#GreatApesVirusProject_K2DB_202202 \
+                  --report-minimizer-data \
+                  --report-zero-counts \
+                  --gzip-compressed \
+                  --report ${sampleID}_${run_date}_GreatApesVirusProject_K2DB_202202_REPORT.kraken \
+                  --output - 2>&1 | tee ${sampleID}_{run_date}_LOGS/${shortID}_Kraken_${run_date}.log
+
+done 
+
+exit
+
+
+##creating a heatmap
+module load conda
+conda activate /home/user/haemmerle/miniconda3_envs/VIRAL_Python3_CONDA
+conda activate ~/miniconda3_envs/VIRAL_Python3_CONDA/
+date=$(date +"%y%m%d")
+python /scratch/students/CMEG-22S/haemmerle/sequencing_runs/sequencing_10.11/Scripts/AggrFiltKrakenRep_GIT_Children_08022019.py -i "*GreatApesVirusProject_K2DB_202202_REPORT.kraken" -f ../../Kraken2DB/Virus.list -cmap-py rocket -vmax 1000 -o GreatApesShotgunTEST_${date}_10vmax_K2_GreatApesViralCaptureFilterCData
+
+
+##mapping to the chosen reference genome and preparing a mapping plot
+module load bwa
+module load samtools
+module load conda python3/3.10
+conda activate mapdamage2-2.0.6
+
+run_date=$(date +"%Y%m%d")
+threads="8"
+refseq="/scratch/students/CMEG-22S/haemmerle/sequencing_runs/refgenomes/allgenomes.fa"
+taxon="MultiViralRef"
+
+while read i; do
+
+   sampleID=$(echo ${i} | awk -F".fastq.gz" -v tax=${taxon} '{print $1"_"tax}')
+   #shortID=$(echo ${sampleID} | awk -F"/" -v tax=${taxon} '{print $NF"_"tax}')
+
+mkdir ${sampleID}_${run_date}_ALN_SE_04
+
+    
+cat ./*/${i}.fa > allgenomes.fa
+bwa index allgenomes.fa 
+samtools dict allgenomes.fa > allgenomes.fa.gz
+samtools faidx allgenomes.fa > allgenomes_faidx.fa
+bwa aln -n 0.04 -l 1000 ${refseq} ${i} > ${sampleID}_${run_date}_alnSE.sai; 
+bwa samse ${refseq} ${sampleID}_${run_date}_alnSE.sai ${i} > ${sampleID}_${run_date}_alnSE.sam
+
+
+samtools view -h -b -F4 ${sampleID}_${run_date}_alnSE.sam > ${sampleID}_${run_date}_alnSE.bam
+samtools sort ${sampleID}_${run_date}_alnSE.bam > ${sampleID}_${run_date}_alnSE_sorted.bam
+samtools index ${sampleID}_${run_date}_alnSE_sorted.bam
+    
+samtools rmdup -s ${sampleID}_${run_date}_alnSE_sorted.bam ${sampleID}_${run_date}_alnSE_sorted_rmdup.bam
+samtools index ${sampleID}_${run_date}_alnSE_sorted_rmdup.bam
+    
+
+mapDamage -i ${sampleID}_${run_date}_alnSE_sorted_rmdup.bam -r ${refseq} --no-stats
+    
+mv ${sampleID}* ${sampleID}_${run_date}_ALN_SE_04
+
+done < fastq.list
+
+exit
+
+
+##using aDNA-BAMplotter from Guellil (2021)
+https://github.com/MeriamGuellil/aDNA-BAMPlotter/blob/main/README.md
