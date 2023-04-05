@@ -18,17 +18,17 @@ for i in $(find -name "*_R1_001.fastq.gz" -exec readlink -f {} \;); do
 
     mkdir ${sampleID}_{run_date}_LOGS
 
-    fastqc ${i} -t 2 --outdir ${sampleID}_{run_date}_LOGS
+    fastqc ${i} -t 2 --outdir ${sampleID}_${run_date}_LOGS
 
-    trimmomatic SE -threads ${threads} ${i} ${sampleID}_trimmed_q10_minlen30.fastq.gz ILLUMINACLIP:/#scratch/students/CMEG-22S/haemmerle/sequencing_runs/sequencing_05.10/TruSeq3-PE-2.fa:2:30:10:1:true #LEADING:10 TRAILING:10 MINLEN:30 2>&1 | tee ${sampleID}_{run_date}_LOGS/${shortID}#_Trimmomatic_{run_date}.log
+    trimmomatic SE -threads ${threads} ${i} ${sampleID}_trimmed_q10_minlen30.fastq.gz ILLUMINACLIP:/scratch/students/CMEG-22S/haemmerle/sequencing_runs/sequencing_05.10/TruSeq3-PE-2.fa:2:30:10:1:true LEADING:10 TRAILING:10 MINLEN:30 2>&1 | tee ${sampleID}_${run_date}_LOGS/${shortID}_Trimmomatic_${run_date}.log
 
-    fastqc ${sampleID}_trimmed_q10_minlen30.fastq.gz -t 2 --outdir ${sampleID}_{run_date}_LOGS
+    fastqc ${sampleID}_trimmed_q10_minlen30.fastq.gz -t 2 --outdir ${sampleID}_${run_date}_LOGS
 
     conda activate bbmap-39.01
 
-    clumpify.sh in=${sampleID}_trimmed_q10_minlen30.fastq.gz out=${sampleID}#_trimmed_q10_minlen30_dedup.fastq.gz dedupe=t dupedist=12000 spantiles=t 2>&1 | tee ${sampleID}#_{run_date}_LOGS/${shortID}_clumpify_${run_date}.log
+    clumpify.sh in=${sampleID}_trimmed_q10_minlen30.fastq.gz out=${sampleID}#_trimmed_q10_minlen30_dedup.fastq.gz dedupe=t dupedist=12000 spantiles=t 2>&1 | tee ${sampleID}_${run_date}_LOGS/${shortID}_clumpify_${run_date}.log
 
-    fastqc ${sampleID}_trimmed_q10_minlen30_dedup.fastq.gz -t 2 --outdir ${sampleID}_{run_date}_LOGS
+    fastqc ${sampleID}_trimmed_q10_minlen30_dedup.fastq.gz -t 2 --outdir ${sampleID}_${run_date}_LOGS
 
     conda activate kraken2-2.1.2
     
@@ -39,7 +39,7 @@ for i in $(find -name "*_R1_001.fastq.gz" -exec readlink -f {} \;); do
                   --report-zero-counts \
                   --gzip-compressed \
                   --report ${sampleID}_${run_date}_GreatApesVirusProject_K2DB_202202_REPORT.kraken \
-                  --output - 2>&1 | tee ${sampleID}_{run_date}_LOGS/${shortID}_Kraken_${run_date}.log
+                  --output - 2>&1 | tee ${sampleID}_${run_date}_LOGS/${shortID}_Kraken_${run_date}.log
 
 done 
 
