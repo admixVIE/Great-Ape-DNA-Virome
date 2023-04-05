@@ -26,7 +26,7 @@ for i in $(find -name "*_R1_001.fastq.gz" -exec readlink -f {} \;); do
 
     conda activate bbmap-39.01
 
-    clumpify.sh in=${sampleID}_trimmed_q10_minlen30.fastq.gz out=${sampleID}#_trimmed_q10_minlen30_dedup.fastq.gz dedupe=t dupedist=12000 spantiles=t 2>&1 | tee ${sampleID}_${run_date}_LOGS/${shortID}_clumpify_${run_date}.log
+    clumpify.sh in=${sampleID}_trimmed_q10_minlen30.fastq.gz out=${sampleID}_trimmed_q10_minlen30_dedup.fastq.gz dedupe=t dupedist=12000 spantiles=t 2>&1 | tee ${sampleID}_${run_date}_LOGS/${shortID}_clumpify_${run_date}.log
 
     fastqc ${sampleID}_trimmed_q10_minlen30_dedup.fastq.gz -t 2 --outdir ${sampleID}_${run_date}_LOGS
 
@@ -34,7 +34,7 @@ for i in $(find -name "*_R1_001.fastq.gz" -exec readlink -f {} \;); do
     
     kraken2 ${sampleID}_trimmed_q10_minlen30_dedup.fastq.gz\
                   --threads ${threads} \
-                  --db /scratch/students/CMEG-22S/haemmerle/database/#GreatApesVirusProject_K2DB_202202 \
+                  --db /scratch/students/CMEG-22S/haemmerle/database/GreatApesVirusProject_K2DB_202202 \
                   --report-minimizer-data \
                   --report-zero-counts \
                   --gzip-compressed \
