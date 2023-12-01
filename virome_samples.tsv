@@ -1,0 +1,215 @@
+Museum	Museum-ID	Species	Type	Year_clean	Locality_clean	Age	Sex	Vienna-ID	Library-ID	P7	P7 sequence	P5	P5 sequence	Capture DNA viruses	Concentration (ng/ul)
+Frankfurt	96550	Gorilla	skull	1959	South Cameroon		M	16482	L3064	IBE-WG-P7-71	CGCGCAG	IBE-WG-P5-99	ATACCAG	Pool 4	11.2
+Frankfurt	97143	Gorilla	skull	1958	Equatorial Guinea	juvenile		16555	L3063	IBE-WG-P7-40	CAATTGG	IBE-WG-P5-41	GATGCTG	Pool 3	13.7
+Frankfurt	97029	Gorilla	skull	1959	Equatorial Guinea	juvenile	F	16569	L3065	IBE-WG-P7-1	AACCGGC	IBE-WG-P5-13	CTCTCGT	Pool 20	2.32
+Vienna	NMW 3111/ST 665	Gorilla gorilla	skull	1910	Kivu, DRC	adult	M	16755	L3806	IBE-WG-P7-125	GCGCGCT	IBE-WG-P5-163	TTGAACC	Pool 21	1.21
+Vienna	NMW 3119	Gorilla gorilla	skull	1928	NE-Congo	adult	F	16746	L3801	IBE-WG-P7-171	GTCGACG	IBE-WG-P5-150	TGAGGCC	Pool 21	1.21
+Vienna	NMW 1779	Gorilla gorilla	skull	1908	Kivu, DRC	adult	M	16763	L3813	IBE-WG-P7-143	GGAGGTA	IBE-WG-P5-177	CGCGAAC	Pool 22	2.4
+Vienna	NMW 7136	Gorilla gorilla	skull	1936	Cameroon	adult	M	16765	L3809	IBE-WG-P7-176	GTTCAGC	IBE-WG-P5-153	AGCCGCC	Pool 21	1.21
+Frankfurt	96255	Gorilla gorilla (Savage 1847)	skull	1959	Equatorial Guinea	juvenile	M	16557	L3073	IBE-WG-P7-343	TCAGTTA	IBE-WG-P5-284	TGCAGTC	Pool 5	6.56
+Frankfurt	45713	Gorilla gorilla (Savage 1847)	skull	1972	E-Cameroon			16486	L3069	IBE-WG-P7-68	CGAGCGC	IBE-WG-P5-42	CCTCCTG	Pool 4	11.2
+Frankfurt	5277	Gorilla gorilla (Savage 1847)	skull	1913	Cameroon	adult	F	16558	L3070	IBE-WG-P7-301	GCGATTA	IBE-WG-P5-350	GTACCGA	Pool 4	11.2
+Frankfurt	4109	Gorilla gorilla (Savage 1847)	skull	1911	S-Cameroon		M	16488	L3062	IBE-WG-P7-24	AGTAGTT	IBE-WG-P5-18	CGCTTCT	Pool 3	13.7
+Frankfurt	4108	Gorilla gorilla (Savage 1847)	skull	1911	S-Cameroon		M	16489	L3066	IBE-WG-P7-135	GCTGAAG	IBE-WG-P5-144	CATATCC	Pool 4	11.2
+Frankfurt	1132	Gorilla gorilla (Savage 1847)	skull	1940	Gabon		M	16490	L3071	IBE-WG-P7-331	GTCAGGC	IBE-WG-P5-253	TCCTCGG	Pool 4	11.2
+Frankfurt	59158	Gorilla gorilla (Savage 1847)	skull	1965	captive	juvenile	M	16570	L3142	IBE-WG-P7-85	CTAGGTT	IBE-WG-P5-70	TTCTGCG	Pool 8	47.2
+Frankfurt	1134	Gorilla gorilla (Savage 1847)	skull	1884	West Africa		F	16571	L3061	IBE-WG-P7-230	AGCAACT	IBE-WG-P5-348	AACTCGA	Pool 3	13.7
+Frankfurt	16180	Gorilla gorilla (Savage 1847)	skull	1956	Equatorial Guinea	juvenile		16572	L3068	IBE-WG-P7-258	CCTTGAA	IBE-WG-P5-344	CATTGGA	Pool 4	11.2
+Frankfurt	17826	Gorilla gorilla (Savage 1847)	skull	1957	Equatorial Guinea	subadult	M	16573	L3067	IBE-WG-P7-240	ATTACCG	IBE-WG-P5-345	AGATGGA	Pool 4	11.2
+Frankfurt	ZIH9	Pan troglodytes (Blumenbach 1775)	skull	1872	Guinea			16559	L3103	IBE-WG-P7-297	GCAGGCC	IBE-WG-P5-269	GAAGTAG	Pool 20	2.32
+Frankfurt	59303	Pan troglodytes (Blumenbach 1775)	skull	1881	Sudan/DRC	juvenile		16492	L3091	IBE-WG-P7-297	GCAGGCC	IBE-WG-P5-269	GAAGTAG	Pool 6	2.52
+Frankfurt	59297	Pan troglodytes (Blumenbach 1775)	skull	1966	captive	adult	F	16561	L3078	IBE-WG-P7-257	CCTTCGG	IBE-WG-P5-252	CGTTCGG	Pool 5	6.56
+Frankfurt	5532	Pan troglodytes (Blumenbach 1775)	skull	1914	captive		F	16562	L3075	IBE-WG-P7-274	CTCTACT	IBE-WG-P5-268	CTCGACG	Pool 5	6.56
+Frankfurt	4104	Pan troglodytes (Blumenbach 1775)	skull	1916	Ubangi, DRC	adult	F	16497	L3076	IBE-WG-P7-231	AGCATGG	IBE-WG-P5-239	AAGCCAT	Pool 5	6.56
+Frankfurt	2538	Pan troglodytes (Blumenbach 1775)	skull	1911	unknown	juvenile	F	16563	L3088	IBE-WG-P7-243	CAAGGAG	IBE-WG-P5-283	ATGCGTC	Pool 20	2.32
+Frankfurt	17961	Pan troglodytes (Blumenbach 1775)	skull	1958	unknown			16564	L3084	IBE-WG-P7-290	GAGTCGC	IBE-WG-P5-304	GATCCGC	Pool 6	2.52
+Frankfurt	59298	Pan troglodytes (Blumenbach 1775)	skull	1966	captive	adult	M	16565	L3080	IBE-WG-P7-262	CGCTATC	IBE-WG-P5-295	CGGAATC	Pool 20	2.32
+Frankfurt	4107	Pan troglodytes (Blumenbach 1775)	partial skull	1911	S-Cameroon			16501	L3081	IBE-WG-P7-171	GTCGACG	IBE-WG-P5-150	TGAGGCC	Pool 5	6.56
+Frankfurt	4106	Pan troglodytes (Blumenbach 1775)	skull	1940	Cameroon			16566	L3083	IBE-WG-P7-237	ATCTTCC	IBE-WG-P5-246	ACGGATG	Pool 6	2.52
+Frankfurt	2495	Pan troglodytes (Blumenbach 1775)	skull	1909	Cameroon		F	16567	L3082	IBE-WG-P7-272	CTCGCGT	IBE-WG-P5-282	CTAGGTC	Pool 5	6.56
+Frankfurt	15817	Pan troglodytes (Blumenbach 1775)	skull	1909	NW-Cameroon		F	16505	L3087	IBE-WG-P7-244	CAGGTCC	IBE-WG-P5-314	ATGGTCC	Pool 6	2.52
+Frankfurt	15792	Pan troglodytes (Blumenbach 1775)	skull	1909	captive	juvenile	F	16580	L3092	IBE-WG-P7-313	GGAAGAC	IBE-WG-P5-245	GCATATG	Pool 6	2.52
+Frankfurt	94797	Pan troglodytes (Blumenbach 1775)	skull	1988	captive	adult	F	16581	L3072	IBE-WG-P7-87	CTATGCG	IBE-WG-P5-50	ATCTTGG	Pool 4	11.2
+Frankfurt	59299	Pan troglodytes (Blumenbach 1775)	skull	1966	unknown	subadult	F	16582	L3079	IBE-WG-P7-53	CCATATT	IBE-WG-P5-38	ATAGTTG	Pool 5	6.56
+Frankfurt	4103	Pan troglodytes subsp. schweinfurthii (Giglioli 1872)	skull	1911	Ubangi, CAR		M	16506	L3077	IBE-WG-P7-238	ATGGACC	IBE-WG-P5-359	ACCATAA	Pool 5	6.56
+Frankfurt	94796	Gorilla beringei Matschie, 1903	skull	1974	Rwanda			16906	L3090	IBE-WG-P7-308	GCGTTAT	IBE-WG-P5-251	GCCATGG	Pool 6	2.52
+Prague	P6V 022893	Pan troglodytes	skeleton	1907	unknown			17488	L2040	P7_27	CAATTAC	P5_91		Pool 12	1.11
+Prague	P6V 023295	Pan troglodytes	skeleton	1908	unknown	juv		17490	L2044	P7_31	CAGTACT	P5_95		Pool 13	1.19
+Prague	P6V 023296	Pan troglodytes	skeleton	1905	unknown	juv		17492	L2042	P7_29	CCGATTG	P5_93		Pool 13	1.19
+Prague	P6V 022891	Pan troglodytes	skeleton	1909	unknown			17493	L2041	P7_28	AGATAGG	P5_92		Pool 12	1.11
+Dresden	4788	Pan troglodytes (Blumenbach 1775)	skull	1909	NW-Cameroon			17445	L3126	IBE-WG-P7-46	CATCTTG	IBE-WG-P5-52	AGACTGG	Pool 8	47.2
+Dresden	288-A.S. 198	Gorilla gorilla (Savage 1847)	skull	1877	Ogouoe, Gabon			17433	L3104	IBE-WG-P7-59	CCTATAG	IBE-WG-P5-77	CAGACCG	Pool 7	18.8
+Dresden	1384-A.S. 1289	Gorilla gorilla (Savage 1847)	skull	1877	Elobe, Gabon			17436	L3107	IBE-WG-P7-263	CGGACCT	IBE-WG-P5-325	CGATACC	Pool 7	18.8
+Dresden	12099	Gorilla gorilla (Savage 1847)	skull	1933	Equatorial Guinea			17437	L3109	IBE-WG-P7-281	GAAGTTC	IBE-WG-P5-315	CGGCTCC	Pool 7	18.8
+Dresden	12101	Gorilla gorilla (Savage 1847)	skull	1933	Equatorial Guinea			17439	L3111	IBE-WG-P7-233	AGGTAAG	IBE-WG-P5-280	ACCTAAG	Pool 7	18.8
+Dresden	12177	Gorilla gorilla (Savage 1847)	skull	1933	Equatorial Guinea			17440	L3112	IBE-WG-P7-313	GGAAGAC	IBE-WG-P5-280	ACCTAAG	Pool 20	2.32
+Dresden	12178	Gorilla gorilla (Savage 1847)	skull	1933	Equatorial Guinea			17441	L3113	IBE-WG-P7-15	ACTCAGT	IBE-WG-P5-245	GCATATG	Pool 20	2.32
+Dresden	61-A.S. 244	Pan troglodytes (Blumenbach 1775)	skull	1875	Ogouoe, Gabon			17443	L3121	IBE-WG-P7-217	TGGTCAT	IBE-WG-P5-195	GAGTTGA	Pool 7	18.8
+Dresden	4786	Pan troglodytes (Blumenbach 1775)	skull	1908	NW-Cameroon			17444	L3125	IBE-WG-P7-11	ACCAGTA	IBE-WG-P5-19	CCGGTCT	Pool 8	47.2
+Dresden	4789	Pan troglodytes (Blumenbach 1775)	skull	1908	NW-Cameroon			17446	L3127	IBE-WG-P7-83	CTAATCA	IBE-WG-P5-74	GACTCCG	Pool 8	47.2
+Dresden	4793	Pan troglodytes (Blumenbach 1775)	skull	1908	NW-Cameroon			17448	L3129	IBE-WG-P7-125	GCGCGCT	IBE-WG-P5-163	TTGAACC	Pool 8	47.2
+Dresden	281-A.S. 239	Gorilla gorilla (Savage 1847)	skull	1877	Ogouoe, Gabon			17459	L3118	IBE-WG-P7-186	TAGACTA	IBE-WG-P5-181	TCTATTA	Pool 7	18.8
+Dresden	287-A.S. 200	Gorilla gorilla (Savage 1847)	skull	1877	Ogouoe, Gabon			17460	L3119	IBE-WG-P7-236	ATCAATC	IBE-WG-P5-242	AGCCAAT	Pool 21	1.21
+Dresden	12034	Gorilla gorilla (Savage 1847)	skull	1933	E-Cameroon			17461	L3108	IBE-WG-P7-176	GTTCAGC	IBE-WG-P5-153	AGCCGCC	Pool 7	18.8
+Dresden	12062	Gorilla gorilla (Savage 1847)	skull	1900	Cameroon			17463	L3120	IBE-WG-P7-6	AAGACGT	IBE-WG-P5-17	CATAAGT	Pool 7	18.8
+Dresden	247-A.S. 216	Pan troglodytes (Blumenbach 1775)	skull	1876	Gabon			17466	L3122	IBE-WG-P7-249	CATTGCT	IBE-WG-P5-346	ATTCGGA	Pool 21	1.21
+Dresden	249-A.S. 214	Pan troglodytes (Blumenbach 1775)	skull	1876	Gabon			17467	L3123	IBE-WG-P7-299	GCCGGAA	IBE-WG-P5-347	GACCGGA	Pool 7	18.8
+Dresden	266-A.S. 211	Pan troglodytes (Blumenbach 1775)	skull	1876	Gabon			17468	L3124	IBE-WG-P7-296	GCAACGG	IBE-WG-P5-319	GACGGCC	Pool 8	47.2
+Berlin	ZMB_Mam_83682	Pan troglodytes	Skull	1911	Togo			17752	L3868	IBE-WG-P7-290	GAGTCGC	IBE-WG-P5-304	GATCCGC	Pool 24	1.81
+Berlin	ZMB_Mam_30755	Pan troglodytes	Skull; Skeleton; Skin	1920	C-Cameroon		M	17753	L3851	IBE-WG-P7-232	AGGCAGC	IBE-WG-P5-265	ACTACCG	Pool 23	2.74
+Berlin	ZMB_Mam_11637	Pan troglodytes	Skull	~1950	NW-Cameroon			17754	L3869	IBE-WG-P7-307	GCGTCCA	IBE-WG-P5-303	GCAGCGC	Pool 24	1.81
+Berlin	ZMB_Mam_83653	Pan troglodytes	Skull; Skeleton; Skin	1907	W-Cameroon			17755	L3861	IBE-WG-P7-40	CAATTGG	IBE-WG-P5-41	GATGCTG	Pool 24	1.81
+Berlin	ZMB_Mam_83681	Pan troglodytes	Skull	1908	Central-DRC			17757	L3867	IBE-WG-P7-272	CTCGCGT	IBE-WG-P5-282	CTAGGTC	Pool 24	1.81
+Berlin	ZMB_Mam_11638	Pan troglodytes	Skull	~1950	Angola		F	17759	L3859	IBE-WG-P7-301	GCGATTA	IBE-WG-P5-350	GTACCGA	Pool 23	2.74
+Berlin	ZMB_Mam_83547	Pan troglodytes	Skull	~1950	W-Cameroon			17760	L3850	IBE-WG-P7-250	CCAGCTG	IBE-WG-P5-288	CAGCCTC	Pool 22	2.4
+Berlin	ZMB_Mam_83617	Pan troglodytes	Skull; Skeleton; Skin	~1950	W-Cameroon			17761	L3863	IBE-WG-P7-121	GCCTACC	IBE-WG-P5-128	ACGCCGC	Pool 24	1.81
+Berlin	ZMB_Mam_45130	Pan troglodytes	Skull	~1950	Ghana		F	17762	L3852	IBE-WG-P7-24	AGTAGTT	IBE-WG-P5-18	CGCTTCT	Pool 23	2.74
+Berlin	ZMB_Mam_17011	Pan troglodytes	Skull; Skeleton	1914	CAR			17766	L3862	IBE-WG-P7-274	CTCTACT	IBE-WG-P5-268	CTCGACG	Pool 24	1.81
+Berlin	ZMB_Mam_83606	Pan troglodytes	Skull	~1950	NW-Cameroon		F	17767	L3871	IBE-WG-P7-235	ATAACGC	IBE-WG-P5-234	AGGAACT	Pool 24	1.81
+Berlin	ZMB_Mam_83648	Pan troglodytes	Skull	~1950	NW-Cameroon		F	17768	L3872	IBE-WG-P7-244	CAGGTCC	IBE-WG-P5-314	ATGGTCC	Pool 24	1.81
+Berlin	ZMB_Mam_24838	Pan troglodytes	Skull; Skeleton	1913	Rwanda			17772	L3858	IBE-WG-P7-258	CCTTGAA	IBE-WG-P5-344	CATTGGA	Pool 23	2.74
+Berlin	ZMB_Mam_83647	Pan troglodytes	Skull; Skeleton	1910	NE-Nigeria			17774	L3854	IBE-WG-P7-286	GAGCGAC	IBE-WG-P5-291	GGTTATC	Pool 23	2.74
+Berlin	ZMB_Mam_83607	Pan troglodytes	Skull; Skin	1907	NE-Nigeria		F	17775	L3853	IBE-WG-P7-267	CGTCATT	IBE-WG-P5-361	CTCCGAA	Pool 23	2.74
+Berlin	ZMB_Mam_83642	Pan troglodytes	Skull; Skin	1912	NE-Nigeria		M	17776	L3849	IBE-WG-P7-237	ATCTTCC	IBE-WG-P5-246	ACGGATG	Pool 22	2.4
+Berlin	ZMB_Mam_83685	Pan troglodytes	Skull; Skeleton; Skin	1903	S-Gabon		F	17777	L3855	IBE-WG-P7-240	ATTACCG	IBE-WG-P5-345	AGATGGA	Pool 23	2.74
+Berlin	ZMB_Mam_83675	Pan troglodytes	Skull; Skeleton	1910	SE-Cameroon			17778	L3866	IBE-WG-P7-308	GCGTTAT	IBE-WG-P5-251	GCCATGG	Pool 24	1.81
+Berlin	ZMB_Mam_83643	Pan troglodytes	Skull; Skeleton; Skin	1910	SE-Cameroon			17779	L3865	IBE-WG-P7-293	GATCTCT	IBE-WG-P5-247	GAGCATG	Pool 24	1.81
+Berlin	ZMB_Mam_12799	Gorilla gorilla diehli	Skull	1905	W-Cameroon		F	17780	L3848	IBE-WG-P7-301	GCGATTA	IBE-WG-P5-350	GTACCGA	Pool 22	2.4
+Berlin	ZMB_Mam_37523	Gorilla beringei graueri	Skull; Skin	1908	Burundi	juvenilis	F	17781	L3856	IBE-WG-P7-238	ATGGACC	IBE-WG-P5-359	ACCATAA	Pool 23	2.74
+Berlin	ZMB_Mam_31617	Gorilla beringei beringei	Skull; Skeleton	1911	NE-DRC	juvenilis	M	17782	L3844	IBE-WG-P7-85	CTAGGTT	IBE-WG-P5-70	TTCTGCG	Pool 22	2.4
+Berlin	ZMB_Mam_31621	Gorilla beringei graueri	Skull	~1950	SE-DRC	adult	M	17783	L3845	IBE-WG-P7-158	GGTACGC	IBE-WG-P5-88	CCTTGAG	Pool 22	2.4
+Berlin	ZMB_Mam_14644	Gorilla gorilla gorilla	Skull	~1950	Angola		M	17784	L3842	IBE-WG-P7-83	CTAATCA	IBE-WG-P5-74	GACTCCG	Pool 22	2.4
+Berlin	ZMB_Mam_48173	Gorilla gorilla diehli	Skull	~1950	NW-Cameroon			17786	L3846	IBE-WG-P7-230	AGCAACT	IBE-WG-P5-348	AACTCGA	Pool 22	2.4
+Berlin	ZMB_Mam_83519	Gorilla gorilla diehli	Skull	~1950	NW-Cameroon			17787	L3847	IBE-WG-P7-165	GTAAGCT	IBE-WG-P5-178	TATCAAC	Pool 22	2.4
+Berlin	ZMB_Mam_83522	Gorilla gorilla	Skull	~1950	NW-Cameroon			17790	L3857	IBE-WG-P7-257	CCTTCGG	IBE-WG-P5-252	CGTTCGG	Pool 23	2.74
+Bonn	MAM1997-0076	Gorilla beringei	skull	1907	Tanganyka, DRC	adult	F	16456	L3096	IBE-WG-P7-87	CTATGCG	IBE-WG-P5-50	ATCTTGG	Pool 20	2.32
+Bonn	MAM2019-0420	Gorilla beringei	skull	1960	West-DRC	adult	M	16457	L1631	P7_85	CCGGATA	P5_85	TATCCGG	Pool 18	2.78
+Bonn	MAM2019-0419	Gorilla beringei	skull	~1950	captive			16458	L1636	P7_89	TAGTTCC	P5_89	GGAACTA	Pool 1	1.31
+Bonn	MAM1957-0003	Gorilla gorilla	skull	1958	C-Cameroon	subadult	M	16459	L1639	P7_92	GCTAATC	P5_92	GATTAGC	Pool 2	1.56
+Bonn	MAM2019-0404	Gorilla gorilla	skull	1954	SW-Congo		M	16461	L1648	P7_79	CCAACCT	P5_79	AGGTTGG	Pool 1	1.31
+Bonn	MAM2019-0404	Gorilla gorilla	skull	1954	SW-Congo		M	16461	L3148	IBE-WG-P7-9	AAGGCAA	IBE-WG-P5-29	AGATCAT	Pool 21	1.31
+Bonn	MAM2019-0405	Gorilla gorilla	skull	1958	S-Cameroon		M	16462	L1737	P7_26	GATGCCA	P5_26	TGGCATC	Pool 1	1.31
+Bonn	MAM2019-0415	Gorilla gorilla	skull	1958	C-Cameroon			16466	L1739	P7_28	AGATAGG	P5_28	CCTATCT	Pool 1	1.31
+Bonn	MAM2019-0418	Gorilla gorilla	skull	1958	C-Cameroon			16468	L3101	IBE-WG-P7-316	GGCAATA	IBE-WG-P5-360	GCAGGAA	Pool 20	2.32
+Bonn	MAM2015-0479	Gorilla gorilla	skull	1958	Congo		M	16552	L1734	P7_43	AAGGTCT	P5_43	AGACCTT	Pool 18	2.78
+Bonn	MAM2019-0417	Gorilla gorilla	skull	1950	C-Cameroon	adult	M	16467	L1646	P7_77	AATAAGC	P5_77	GCTTATT	Pool 1	1.31
+Salzburg	HNS-Mam-S-0073	Gorilla gorilla (Savage, 1847)	skull	1959	Cameroon	adult	M	15901	L3093	IBE-WG-P7-250	CCAGCTG	IBE-WG-P5-288	CAGCCTC	Pool 6	2.52
+Salzburg	HNS-Mam-S-0076	Gorilla gorilla gorilla (Savage & Wyman, 1847)	skull	1938	Cameroon	adult	M	15904	L1735	P7_44	ACTGGAC	P5_44	GTCCAGT	Pool 18	2.78
+Salzburg	HNS-Mam-S-0075	Gorilla gorilla gorilla (Savage & Wyman, 1847)	skull	1944	Cameroon	subadult		15903	L1727	P7_35	AGAACCG	P5_35	CGGTTCT	Pool 18	2.78
+Salzburg	HNS-Mam-S-0532	Pan spec.	skull	1938	Cameroon	adult		15919	L3059	IBE-WG-P7-15	ACTCAGT	IBE-WG-P5-34	GAGGAAT	Pool 3	13.7
+Salzburg	HNS-Mam-S-0536	Pan spec.	skull	1941	Cameroon	adult		15923	L1651	P7_62	GACGGCG	P5_62	CGCCGTC	Pool 2	1.56
+Salzburg	HNS-Mam-S-0742	Pan spec.	skull	1938	Cameroon	juvenile		15925	L1629	P7_83	TTCTAGG	P5_83	CCTAGAA	Pool 2	1.56
+Salzburg	HNS-Mam-S-0550	Pan spec.	Foot	~1950	Cameroon			15924	L1728	P7_36	TGGAATA	P5_36	TATTCCA	Pool 18	2.78
+Bonn	MAM1997-0070	Pan troglodytes	skull	1913	Cameroon	subadult	F	16554	L3140	IBE-WG-P7-82	CGTTACG	IBE-WG-P5-62	ATGCAGG	Pool 8	47.2
+Vienna	NMW 3105/ST 663	Pan troglodytes	femur	1910	NE-DRC	adult	M	16752	L2039	P7_26	GATGCCA	P5_90		Pool 12	1.11
+Vienna	NMW 25124	Pan troglodytes	skull	1978	unknown		M	16757	L2188	P7_6	ATGGAGA	P5_26	TGGCATC	Pool 11	0.84
+Vienna	NMW 793/ST 1647	Pan troglodytes	skull	1882	unknown	adult	F	16744	L2185	P7_3	CCTAGGT	P5_23	CGAGATC	Pool 11	0.84
+Vienna	NMW 3081	Pan troglodytes	skull	1906	C-Cameroon			16740	L2186	P7_4	GGATCAA	P5_24	CATATTG	Pool 11	0.84
+Vienna	NMW 20516	Pan troglodytes	skull	1976	SW-Cameroon			16739	L2187	P7_5	GCAAGAT	P5_25	GACGTCA	Pool 11	0.84
+Vienna	NMW 3107	Pan troglodytes	skull	1928	NE-Congo	adult	M	16759	L2183	P7_1	TCGCAGG	P5_21	GTTGCGT	Pool 9	1.12
+Vienna	NMW 3106	Pan troglodytes	skull	1912	W-Cameroon	juvenil		16741	L2053	P7_78	AGCCTTG	P5_59	TCAGTAT	Pool 16	1.12
+Vienna	NMW 3948	Pan troglodytes	skull	1912	W-Cameroon	adult	F	16751	L2184	P7_2	CTCTGCA	P5_22	CCAATGC	Pool 11	0.84
+Bonn	MAM1976-0410	Pan troglodytes	incomplete skeleton	1908	Cameroon			16553	L1732	P7_40	TTCGCAA	P5_40	TTGCGAA	Pool 18	2.78
+Bonn	MAM2019-0410	Pan troglodytes	skull	1958	S-Cameroon		M	16473	L1637	P7_90	TGGCAAT	P5_90	ATTGCCA	Pool 1	1.31
+Frankfurt	59296	Pan troglodytes (Blumenbach 1775)	skull	1966	captive	juvenile		16575	L2037	P7_24	CAATATG	P5_2	TGCAGAG	Pool 12	1.11
+Frankfurt	59301	Pan troglodytes (Blumenbach 1775)	skull	1966	captive	juvenile	F	16576	L2050	P7_77	AATAAGC	P5_58	CATACGT	Pool 16	1.12
+Frankfurt	89780	Pan troglodytes (Blumenbach 1775)	skull	2000	captive	adult		16577	L2038	P7_25	TGACGTC	P5_1	CCTGCGA	Pool 12	1.11
+Frankfurt	59304	Pan troglodytes (Blumenbach 1775)	partial skull	1966	unknown			16578	L2051	P7_84	CCTCTAG	P5_63		Pool 17	1.39
+Frankfurt	89781	Pan troglodytes (Blumenbach 1775)	skull	2000	captive	adult		16579	L2052	P7_85	CCGGATA	P5_64		Pool 17	1.39
+Frankfurt	1579	Pan troglodytes (Blumenbach 1775)	skull	1872	SW-Africa		F	16548	L2036	P7_23	GATCTCG	P5_3	ACCTAGG	Pool 12	1.11
+Bonn	MAM2019-0421	Gorilla beringei	skull	1960	West-DRC		M	16452	L1633	P7_87	AACGACC	P5_87	GGTCGTT	Pool 18	2.78
+Bonn	MAM1957-0004	Gorilla gorilla	skull	1958	C-Cameroon		M	16460	L1649	P7_60	TACTTAG	P5_60	CTAAGTA	Pool 2	1.56
+Bonn	MAM2019-0407	Gorilla gorilla	skull	1958	NE-Congo		M	16463	L1635	P7_59	ATACTGA	P5_59	TCAGTAT	Pool 1	1.31
+Bonn	MAM2019-0408	Gorilla gorilla	skull	1958	C-Cameroon		F	16464	L1650	P7_61	AAGCTAA	P5_61	TTAGCTT	Pool 1	1.31
+Bonn	MAM1963-0660	Gorilla gorilla	skull	1958	Cameroon		F	16550	L3094	IBE-WG-P7-267	CGTCATT	IBE-WG-P5-361	CTCCGAA	Pool 6	2.52
+Salzburg	HNS-Mam-S-0519	Gorilla gorilla gorilla (Savage & Wyman, 1847)	skull	1958	Cameroon	juvenile	M	15914	L1704	P7_51	CTATGGC	P5_51	GCCATAG	Pool 18	2.78
+Salzburg	HNS-Mam-S-0524	Gorilla gorilla gorilla (Savage & Wyman, 1847)	skull	1938	Cameroon	adult	M	15915	L1641	P7_72	GGCATAG	P5_72	CTATGCC	Pool 2	1.56
+Salzburg	HNS-Mam-S-0525	Gorilla gorilla gorilla (Savage & Wyman, 1847)	skull	1960	unknown	subadult	M	15916	L3095	IBE-WG-P7-286	GAGCGAC	IBE-WG-P5-291	GGTTATC	Pool 6	2.52
+Salzburg	HNS-Mam-S-0078	Gorilla gorilla gorilla (Savage & Wyman, 1847)	skull	1940	Cameroon	juvenile	F	15906	L3060	IBE-WG-P7-7	AAGAGCC	IBE-WG-P5-35	TTCGAAT	Pool 3	13.7
+Salzburg	HNS-Mam-S-0077	Gorilla gorilla gorilla (Savage & Wyman, 1847)	skull	1938	S-Cameroon	adult	F	15905	L3138	IBE-WG-P7-10	AATAAGA	IBE-WG-P5-14	GCCTAGT	Pool 8	47.2
+Salzburg	HNS-Mam-S-0530	Pan spec.	skull	1938	Cameroon	adult		15917	L1743	P7_32	AATAGTA	P5_32	TACTATT	Pool 2	1.56
+Salzburg	HNS-Mam-S-0534	Pan spec.	skull	1938	Cameroon	adult		15921	L1703	P7_50	AACTAGA	P5_50	TCTAGTT	Pool 2	1.56
+Salzburg	HNS-Mam-S-0533	Pan spec.	skull	1938	Cameroon	adult		15920	L3058	IBE-WG-P7-4	AACGTAC	IBE-WG-P5-30	GTAGCAT	Pool 3	13.7
+Salzburg	HNS-Mam-S-0531	Pan spec.	skull	1938	Cameroon	adult		15918	L3056	IBE-WG-P7-8	AAGCGTT	IBE-WG-P5-16	TGAGAGT	Pool 3	13.7
+Salzburg	HNS-Mam-S-0535	Pan spec.	skull	1918	Cameroon	adult		15922	L3057	IBE-WG-P7-165	GTAAGCT	IBE-WG-P5-178	TATCAAC	Pool 3	13.7
+Bonn	MAM2012-0036	Pan troglodytes	skull	1914	S-Cameroon		F	16470	L1652	P7_63	AGAAGAC	P5_63	GTCTTCT	Pool 1	1.31
+Bonn	MAM1965-0550	Pan troglodytes	skull	1964	Ogouoe, Gabon	adult	M	16471	L1706	P7_53	AACCAAG	P5_53	CTTGGTT	Pool 2	1.56
+Bonn	MAM1994-0482	Pan troglodytes	tooth	1914	SW-Cameroon			16474	L1653	P7_64	GTCCGGC	P5_64	GCCGGAC	Pool 2	1.56
+Bonn	MAM2019-0416	Pan troglodytes	skull	1958	Cameroon		M	16551	L1656	P7_68	TAATCAT	P5_68	ATGATTA	Pool 1	1.31
+Salzburg	HNS-Mam-S-0079	Pan troglodytes (Blumenbach, 1775)	skull	1939	captive	adult	F	15907	L1702	P7_49	AGTCAGA	P5_49	TCTGACT	Pool 18	2.78
+Salzburg	HNS-Mam-S-0082	Pan troglodytes (Blumenbach, 1775)	skull	~1960	captive	subadult	M	15910	L3152	IBE-WG-P7-168	GTATAAC	IBE-WG-P5-139	TCATTCC	Pool 21	1.21
+Prague	P6V 046815	Gorilla gorilla	skull+skeleton partim	1984	captive		F	17482	L2190	P7_8	GCTCGAA	P5_28	CCTATCT	Pool 11	0.84
+Prague	P6V 050432	Gorilla gorilla	skull	2002	Africa		M	17486	L2192	P7_10	CCGGTAC	P5_30	GCGGCAT	Pool 10	0.82
+Prague	P6V 046816	Gorilla gorilla	skeleton	~1960	captive			17497	L2189	P7_7	CTCGATG	P5_27	GTAATTG	Pool 11	0.84
+Prague	P6V 049711	Pan troglodytes	skeleton	1982	unknown	adult	M	17480	L2193	P7_11	AACTCCG	P5_31	AGTACTG	Pool 11	0.84
+Prague	P6V 023283	Pan troglodytes	skeleton	1968	unknown	juv		17491	L2043	P7_30	ATGCCGC	P5_94		Pool 13	1.19
+Prague	P6V 022892	Pan troglodytes	skeleton	1960	unknown			17500	L2191	P7_9	ACCAACT	P5_29	CAATCGG	Pool 11	0.84
+Bonn	MAM1962-0131	Pan paniscus	skull	1962	captive		M	16476	L2178	71	TAGGCCG	41	TTGAATT	Pool 16	1.12
+Bonn	MAM1965-0544	Pongo abelii	skull	1964	Sumatra		M	16477	L1948	P7_4	GGATCAA	P5_14	GATCCAA	Pool 9	1.12
+Bonn	MAM1965-0545	Pongo abelii	skull	1964	Sumatra	adult	M	16478	L1947	P7_3	CCTAGGT	P5_15	CAGGTCG	Pool 9	1.12
+Bonn	MAM1965-0546	Pongo abelii	skull	1964	Sumatra	juvenil	M	16479	L1949	P7_5	GCAAGAT	P5_13	TGATAGT	Pool 9	1.12
+Bonn	MAM1965-0547	Pongo abelii	skull	1964	Sumatra	adult	F	16480	L1946	P7_2	CTCTGCA	P5_16	CGCATTA	Pool 9	1.12
+Bonn	MAM1938-0136	Pongo abelii	skull	1938	S-Sumatra	subadult	F	16481	L2177	P7_70	GACGATT	P5_40	TTGCGAA	Pool 16	1.12
+Frankfurt	94799	Pan paniscus Schwartz 1929	skull	1985	captive	juvenile	F	16507	L2138	P7_48	AATGATG	P5_37	CCTCCTG	single capture	1.14
+Frankfurt	92953	Pan paniscus Schwartz 1929	skel	2000	captive	adult	M	16508	L2127	P7_32	AATAGTA	P5_26	TGGCATC	single capture	1.35
+Frankfurt	6992	Pongo abelii Lesson 1827	skull	1929	Aceh	adult	M	16509	L1914	P7_68	TAATCAT	P5_84		single capture	2.1
+Frankfurt	6785	Pongo abelii Lesson 1827	skull	1928	Aceh	adult	M	16510	L1876	P7_11	AACTCCG	P5_17	GGTACCT	Pool 10	0.82
+Frankfurt	6782	Pongo abelii Lesson 1827	skull	1928	Aceh	juvenile	M	16511	L1911	P7_63	AGAAGAC	P5_78		Pool 15	1.95
+Frankfurt	6779	Pongo abelii Lesson 1827	skull	1927	Aceh	adult	F	16512	L1954	P7_92	GCTAATC	P5_87		Pool 17	1.39
+Frankfurt	3221	Pongo abelii Lesson 1827	skull	1911	Deli		M	16513	L1955	P7_93	GACTTCT	P5_88		Pool 17	1.39
+Frankfurt	1120	Pongo abelii Lesson 1827	skull	1892	Deli	adult	F	16514	L1912	P7_66	AGAGCGC	P5_66		Pool 15	1.95
+Frankfurt	1118	Pongo abelii Lesson 1827	skull	1892	Deli	adult	M	16515	L1874	P7_9	ACCAACT	P5_8	TTCGAGC	Pool 10	0.82
+Frankfurt	1126	Pongo abelii Lesson 1827	skull	1905	Sumatra	juvenile	M	16516	L1913	P7_67	GCCTACG	P5_81		Pool 15	1.95
+Frankfurt	1119	Pongo abelii Lesson 1827	skull	1892	Deli	adult	F	16517	L1918	P7_81	AGAATTA	P5_62		Pool 17	1.39
+Frankfurt	6716	Pongo abelii Lesson 1827	skull	1925	Medan		M	16518	L1956	P7_94	GTACTAT	P5_89		Pool 17	1.39
+Frankfurt	59147	Pongo abelii Lesson 1827	skull	1965	Aceh	adult	F	16519	L2130	P7_35	AGAACCG	P5_29	CAATCGG	Pool 19	1.61
+Frankfurt	59140	Pongo abelii Lesson 1827	skull	1967	Aceh	subadult	F	16520	L2128	P7_33	CATCCGG	P5_27	GTAATTG	Pool 18	2.78
+Frankfurt	2639	Pongo pygmaeus (Linnaeus 1760)	skull	1893	Pontianak		F	16522	L2129	P7_34	TCATGGT	P5_28	CCTATCT	Pool 19	1.61
+Frankfurt	2638	Pongo pygmaeus (Linnaeus 1760)	skull	1893	Pontianak		M	16523	L1910	P7_65	TCAGCTT	P5_80		Pool 15	1.95
+Frankfurt	1576	Pongo pygmaeus (Linnaeus 1760)	skull	1838	Java	juvenile		16524	L2045	P7_39	CGAATGC	P5_38	AGGTATT	Pool 13	1.19
+Frankfurt	24510	Pongo pygmaeus (Linnaeus 1760)	skull	1959	captive	adult	F	16525	L1953	P7_20	CATGCTC	P7_6	TCTCCAT	Pool 12	1.11
+Frankfurt	10325	Pongo pygmaeus (Linnaeus 1760)	skull	1950	captive	juvenile		16526	L1915	P7_38	AATACCT	P5_28	CCTATCT	Pool 13	1.19
+Frankfurt	2654	Pongo pygmaeus (Linnaeus 1760)	skull	1909	unknown			16527	L1952	P7_18	TGCGTCC	P5_10	GTACCGG	Pool 12	1.11
+Frankfurt	1121	Pongo pygmaeus (Linnaeus 1760)	skull	1838	unknown		M	16528	L1875	P7_10	CCGGTAC	P5_9	AGTTGGT	single capture	0.97
+Frankfurt	1115	Pongo pygmaeus (Linnaeus 1760)	skull	1841	Java	juvenile	F	16529	L2181	P7_74	TTAACTC	P5_44	GTCCAGT	Pool 16	1.12
+Frankfurt	1114	Pongo pygmaeus (Linnaeus 1760)	skull	1841	Java	juvenile	M	16530	L2180	P7_73	TTCAACC	P5_43	AGACCTT	Pool 16	1.12
+Frankfurt	1112	Pongo pygmaeus (Linnaeus 1760)	skull	1841	Java	adult	F	16531	L1916	P7_79	CCAACCT	P5_60	CTAAGTA	Pool 17	1.39
+Frankfurt	1111	Pongo pygmaeus (Linnaeus 1760)	skull	1841	Java		F	16532	L1873	P7_7	CTCGATG	P5_7	CATCGAG	Pool 9	1.12
+Frankfurt	1110	Pongo pygmaeus (Linnaeus 1760)	skull	1841	Java	adult	M	16533	L1917	P7_80	GCAGAAG	P5_61		Pool 17	1.39
+Frankfurt	1113	Pongo pygmaeus (Linnaeus 1760)	skull	1841	Java	juvenile	M	16534	L2131	P7_36	TGGAATA	P5_30	GCGGCAT	Pool 19	1.61
+Salzburg	HNS-Mam-S-0086	Pan paniscus Schwartz, 1929	skull	1950	unknown	adult	M	15913	L2179	P7_72	GGCATAG	P5_42	CTGCGCG	Pool 16	1.12
+Salzburg	HNS-Mam-S-0084	Pan paniscus Schwartz, 1929	skull	1944	captive	juvenile	F	15911	L1951	P7_8	GCTCGAA	P5_11	CGGAGTT	Pool 9	1.12
+Salzburg	HNS-Mam-S-0085	Pan paniscus Schwartz, 1929	skull	1944	captive	adult	M	15912	L1950	P7_6	ATGGAGA	P5_12	ACTTCAA	Pool 9	1.12
+Stuttgart	SMNS-Z-MAM-048948	Pan paniscus Schwarz, 1929	complete mount	1973	unknown	adult	M	17194	L1879	P7_14	TTGGATC	P5_21	GTTGCGT	Pool 10	0.82
+Stuttgart	SMNS-Z-MAM-045995	Pan paniscus Schwarz, 1929	complete mount	~1960	unknown	adult	F	17255	L2132	P7_37	CAGGAGG	P5_31	AGTACTG	Pool 19	1.61
+Stuttgart	SMNS-Z-MAM-001750	Pongo abelii Lesson, 1827	unmounted skeleton	1880	Indonesia	juvenil	M	17203	L1880	P7_15	CGACCTG	P5_22	CCAATGC	Pool 10	0.82
+Stuttgart	SMNS-Z-MAM-046000	Pongo abelii Lesson, 1827	skull	1930	Aceh			17290	L1881	P7_16	TAATGCG	P5_23	CGAGATC	Pool 10	0.82
+Stuttgart	SMNS-Z-MAM-001687	Pongo pygmaeus (Linnaeus, 1760)	complete mount	1879	Indonesia	adult	M	17204	L1878	P7_13	ACTATCA	P5_20	GAGCATG	Pool 10	0.82
+Stuttgart	SMNS-Z-MAM-002012	Pongo pygmaeus (Linnaeus, 1760)	unmounted skeleton	~1960	Indonesia	juvenil	F	17258	L1877	P7_12	TTGAAGT	P5_19	GAGATTC	Pool 10	0.82
+Prague	P6V 023284	Pongo pygmaeus	skeleton	1968	unknown			17476	L2048	P7_43	AAGGTCT	P5_51	GCCATAG	Pool 13	1.19
+Prague	P6V 094957	Pongo abelii	skeleton+skin	2014	captive		M	17477	L2034	P7_61	AAGCTAA	P5_76		Pool 15	1.95
+Prague	P6V 095098	Pongo pygmaeus	skeleton	2007	unknown		F	17478	L2029	P7_53	AACCAAG	P5_53	CTTGGTT	Pool 14	1.96
+Prague	P6V 010784	Pongo pygmaeus	skull	1960	unknown	juv		17479	L2031	P7_55	GCAGTCC	P5_55	GGACTGC	Pool 14	1.96
+Prague	P6V 024475	Pongo pygmaeus	skull+skeleton partim+mounted	1975	captive		M	17481	L2182	P7_75	TAGTCTA	P5_45	ACCTGCT	Pool 16	1.12
+Prague	P6V 094205	Pongo pygmaeus	skeleton	1989	captive	adult	M	17484	L2033	P7_60	TACTTAG	P5_75		Pool 15	1.95
+Prague	P6V 047656	Pongo pygmaeus		~1960	unknown			17485	L2032	P7_56	CTCGCGC	P5_56	GCGCGAG	Pool 14	1.96
+Prague	P6V 023297	Pongo pygmaeus	skeleton	1903	unknown	subadult		17487	L2046	P7_40	TTCGCAA	P5_39	GCATTCG	Pool 13	1.19
+Prague	P6V 047007	Pongo pygmaeus	skeleton	1989	captive	juvenile	F	17489	L2049	P7_50	AACTAGA	P5_57	GTCGCAG	Pool 14	1.96
+Prague	P6V 024474	Pongo pygmaeus	skull+skeleton partim	1975	unknown		F	17495	L2027	P7_59	ATACTGA	P5_74		Pool 15	1.95
+Prague	P6V 094564	Pongo abelii	skeleton	2013	unknown	adult	M	17499	L2028	P7_52	CGACGGT	P5_52	ACCGTCG	Pool 14	1.96
+Prague	P6V 009605	Pongo pygmaeus	skull	1894	Borneo		M	17501	L2030	P7_54	CGGCGTA	P5_54	TACGCCG	Pool 14	1.96
+Prague	P6V 010588	Pongo pygmaeus	skull	~1960	unknown	juv		17475	L2047	P7_41	AATTCAA	P5_50	TCTAGTT	Pool 13	1.19
+Dresden	1607-A.S. 1690	Pongo pygmaeus (Linnaeus 1760)	skull	1885	Sumatera Utara			17451	L2026	P7_64	GTCCGGC	P5_79		Pool 15	1.95
+Dresden	14244	Pongo pygmaeus (Linnaeus 1760)	skull	1983	Sumatra			17452	L2024	P7_57	CTGCGAC	P5_72		Pool 14	1.96
+Dresden	3686	Pongo pygmaeus (Linnaeus 1760)	skull	1898	Sumatra Langkat			17453	L2133	P7_42	CGCGCAG	P5_32	TACTATT	Pool 19	1.61
+Dresden	4188	Pongo pygmaeus (Linnaeus 1760)	skull	1901	Sumatra Langkat			17454	L2134	P7_44	ACTGGAC	P5_33	CCGGATG	Pool 19	1.61
+Dresden	11877	Pongo pygmaeus (Linnaeus 1760)	skull	1975	captive			17455	L2135	P7_45	AGCAGGT	P5_34	ACCATGA	Pool 19	1.61
+Dresden	15789	Pongo pygmaeus (Linnaeus 1760)	skull	1940	Sumatra			17456	L2025	P7_58	ACGTATG	P5_74		Pool 14	1.96
+Dresden	253-A.S. 221	Pongo pygmaeus (Linnaeus 1760)	skull	1876	Borneo Matang			17469	L2137	P7_47	GGTCAAG	P5_36	TATTCCA	Pool 19	1.61
+Dresden	251-A.S. 231	Pongo pygmaeus (Linnaeus 1760)	skull	1876	Sarawak			17470	L2136	P7_46	GTACCGG	P5_35	CGGTTCT	Pool 19	1.61
+Berlin	ZMB_Mam_108652	Pongo abelii	Skull	~1950	Sumatra			17789	L2035	P7_62	GACGGCG	P5_77		Pool 15	1.95
+Prague	P6V 046816-b	Pongo spec.		~1960	unknown			17498	L2194	P7_12	TTGAAGT	P5_32	TACTATT	Pool 11	0.84
+Salzburg	HNS-Mam-S-0079	Pan troglodytes (Blumenbach, 1775)	skull	1939	captive	adult	F	15907	L3145	IBE-WG-P7-60	CCTCGTC	IBE-WG-P5-86	ATGATAG	Pool 8	47.2
+Salzburg	HNS-Mam-S-0532	Pan spec.	skull	1938	Cameroon	adult		15919	L3074	IBE-WG-P7-299	GCCGGAA	IBE-WG-P5-347	GACCGGA	Pool 20	2.32
+Bonn	MAM2019-0421	Gorilla beringei	skull	1960	West-DRC		M	16452	L3143	IBE-WG-P7-2	AACCTTA	IBE-WG-P5-12	GCGAGGT	Pool 21	1.21
+Salzburg	HNS-Mam-S-0519	Gorilla gorilla gorilla (Savage & Wyman, 1847)	skull	1938	Cameroon	juvenile	M	15914	L3149	IBE-WG-P7-82	CGTTACG	IBE-WG-P5-62	ATGCAGG	Pool 21	1.21

@@ -1,3 +1,3 @@
 # Great-Ape-Virome
 
-This repository contains relevant additional information for my Master's thesis concerning the great ape DNA virome and the used code. 
+This repository contains relevant information for the manuscript concerning the great ape DNA virome. 
