@@ -77,3 +77,60 @@ b3<-  ggplot(ac) + theme_bw() + geom_violin(mapping=aes(x=Type,y=Value, fill=Typ
 pdf(paste("plots/3_assigned-reads.pdf",sep=""),12,5)
 b2 + b3 + b1 +  plot_annotation(tag_levels = "A") 
 dev.off()
+
+
+
+######## overview of viruses from kraken2 output
+library("ggplot2")
+library("gridExtra")
+library("grid")
+library("cowplot")
+library("dplyr")
+library("RColorBrewer")
+'%ni%' <- Negate('%in%')
+
+krk<-read.table("TableS4.txt",sep="\t",header=T,fill=T,as.is=T, quote="")
+
+# A) stacked barplot of numbers of reads assigend to specific types
+kk1<-colSums(krk[,-1])
+relms<-c("Monodnaviria","Duplodnaviria","Varidnaviria","Riboviria")
+uncl<-c("unclassified.Viruses", "Anelloviridae")
+relms<-cbind(rep("Realm",length(relms)+1),c(names(kk1[which(names(kk1)%in%relms)]),"Other/uncertain"),c(kk1[which(names(kk1)%in%relms)],sum(kk1[which(names(kk1)%in%uncl)])))
+relms<-cbind(relms,as.numeric(relms[,3])/sum(as.numeric(relms[,3])))
+fnam<-c("Herpesviridae", "Adenoviridae", "Circoviridae", "Hepadnaviridae", "Genomoviridae","Papillomaviridae", "Parvoviridae", "Poxviridae","Polyomaviridae","Retroviridae")
+madna<-cbind(rep("Family",length(fnam)),names(kk1[which(names(kk1)%in%fnam)]),kk1[which(names(kk1)%in%fnam)])
+madna<-cbind(madna,as.numeric(madna[,3])/sum(as.numeric(madna[,3])))
+kk2<-rbind(relms,madna)
+
+av<-data.frame(grp=kk2[,1],typ=kk2[,2],val=as.numeric(kk2[,4]))
+av$typ = factor(av$typ, levels=c("Monodnaviria","Duplodnaviria","Varidnaviria","Riboviria","Other/uncertain",fnam))
+av$grp = factor(av$grp, levels=c("Realm","Family"))
+av_colors <-  setNames(c(brewer.pal(7,'BrBG')[-c(4:5)],brewer.pal(10,'Set3')), levels(av$typ))
+
+p3f<-
+  ggplot(data=av, aes(x=grp, y=val,fill=typ)) +   geom_bar(stat="identity",position="stack") + theme_minimal(base_size=18) + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),plot.title = element_text(face="bold",hjust=0.5,size=15)) + ggtitle(label="Virus types in data") +ylab("Proportion of viral reads in category") +xlab("") + theme(axis.text.x = element_text(angle = 45, vjust = 1.3, hjust=1)) +  scale_fill_manual(values=av_colors) + theme(legend.position="none") 
+
+p3a<-  av %>%  filter(grp %in% c("Realm")) %>% ggplot(aes(x=grp, fill=typ)) +   geom_bar() + scale_fill_manual(values=av_colors[which(av$grp %in% c("Realm"))],name="Realm")
+p3c<-  av %>%  filter(grp %in% c("Family")) %>% ggplot(aes(x=grp, fill=typ)) +   geom_bar() + scale_fill_manual(values=av_colors[which(av$grp %in% c("Family"))],name="Family (Mammalian)")
+p3<-plot_grid(p3f, plot_grid( get_legend(p3a), get_legend(p3c), nrow = 2), ncol = 2, rel_widths = c(8,2))
+f1 <- arrangeGrob(p3, top = textGrob("A", x = unit(0, "npc"), y   = unit(1, "npc"), just=c("left","top"),gp=gpar(col="black", fontsize=18)))
+
+# B) & C) number of libraries with reads in a given category
+kk3<-ifelse(krk[,-c(1:8,15,20)]>0 ,1,0)
+kk4<-ifelse(krk[,-c(1:8,15,20)]>24,1,0)
+av1<-data.frame(nams=colnames(kk3),val=colSums(kk3));av1<-av1[which(av1$val>0),];av1$nams=factor(av1$nams,levels=av1$nams[order(av1$val,decreasing=T)])
+av2<-data.frame(nams=colnames(kk4),val=colSums(kk4));av2<-av2[which(av2$val>0),];av2$nams=factor(av2$nams,levels=av2$nams[order(av2$val,decreasing=T)])
+p1<-
+  ggplot(data=av1, aes(x=nams, y=val,fill=nams)) +   geom_bar(stat="identity",position="stack") + theme_minimal(base_size = 18) + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),plot.title = element_text(face="bold",hjust=0.5,size=15)) + ggtitle(label="Libraries with any virus-assigned read") +ylab("Number of libraries") +xlab("") + theme(axis.text.x = element_text(angle = 45, vjust = 1.1, hjust=1)) +  scale_fill_manual(values=rep("orange",nrow(av1))) + theme(legend.position = "none")
+
+p2<-
+  ggplot(data=av2, aes(x=nams, y=val,fill=nams)) +   geom_bar(stat="identity",position="stack") + theme_minimal(base_size = 18) + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),plot.title = element_text(face="bold",hjust=0.5,size=15)) + ggtitle(label="Libraries with at least 25 virus-assigned read") +ylab("Number of libraries") +xlab("") + theme(axis.text.x = element_text(angle = 45, vjust = 1.1, hjust=1)) +  scale_fill_manual(values=rep("red",nrow(av2))) + theme(legend.position = "none")
+
+f3 <- arrangeGrob(p1, top = textGrob("B", x = unit(0, "npc"), y   = unit(1, "npc"), just=c("left","top"),gp=gpar(col="black", fontsize=18)))
+f4 <- arrangeGrob(p2, top = textGrob("C", x = unit(0, "npc"), y   = unit(1, "npc"), just=c("left","top"),gp=gpar(col="black", fontsize=18)))
+
+
+pdf(paste("plots/4-abundance.pdf",sep=""),12,8)
+grid.arrange(f1,arrangeGrob(f3,f4, nrow = 2),
+ ncol = 2,widths=c(1,0.9))         
+dev.off()
