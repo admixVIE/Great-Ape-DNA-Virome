@@ -14,12 +14,12 @@ options(scipen=100)
 gav<-read.table("virome_samples.tsv",sep="\t",header=T,fill=T,as.is=T, quote="")
 ## simplify species names
 gasp<-ifelse(grepl("orilla",gav[,3]),"Gorilla",gav[,3])
-gasp<-ifelse(grepl("ongo",gasp),"Pongo",gasp)
+gasp<-ifelse(grepl("ongo",gasp),"Orangutan",gasp)
 gasp<-ifelse(grepl("panisc",gasp),"Bonobo",gasp)
 gasp<-ifelse(grepl("Pan",gasp),"Chimpanzee",gasp)
 
 ## define things needed later on
-specs=c("Chimpanzee","Bonobo","Gorilla","Pongo")
+specs=c("Chimpanzee","Bonobo","Gorilla","Orangutan")
 spcol=colorRampPalette(c("grey35", "grey75"))(length(specs));names(spcol)<-specs
 fosi=15
 
@@ -42,9 +42,9 @@ fosi=12
 kread<-read.table("code/Violin-Plot_Capture.txt",sep="\t",header=T,fill=T,as.is=T, quote="")
 bb<-data.frame(Type=kread[,2],Value=kread[,1])
 bb$Type<-gsub(1,"Raw reads",bb$Type)
-bb$Type<-gsub(2,"Reads after Trimming",bb$Type)
+bb$Type<-gsub(2,"Reads after trimming",bb$Type)
 bb$Type<-gsub(3,"Unique reads",bb$Type)
-bb$Type = factor(bb$Type, levels=c("Raw reads","Reads after Trimming","Unique reads"))
+bb$Type = factor(bb$Type, levels=c("Raw reads","Reads after trimming","Unique reads"))
 
 c1<-  ggplot(bb) + theme_bw() + geom_violin(mapping=aes(x=Type,y=Value, fill=Type),adjust=1.0,draw_quantiles = c(0.5), scale="width", na.rm=T  ) + geom_jitter(mapping=aes(x=Type,y=Value), height = 0, width = 0.2,na.rm=T,inherit.aes=F) + theme(panel.border = element_blank(),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),plot.background = element_rect(fill = "white"), legend.position="none",axis.ticks.x = element_blank(),axis.text.x = element_text(angle = 45, vjust = 0.9, hjust=1,size=fosi),axis.title.x=element_text(size=fosi), plot.title = element_text(face="bold",hjust=0.5,size=12)) + geom_segment(aes(x=0.0,y=0,xend=0.0,yend=45076183))  + ggtitle(label="Number of reads per library") +xlab("") + ylab("Number of reads")
 
@@ -106,9 +106,13 @@ av_colors <-  setNames(c(brewer.pal(7,'BrBG')[-c(4:5)],brewer.pal(10,'Set3')), l
 p3f<-
   ggplot(data=av, aes(x=grp, y=val,fill=typ)) +   geom_bar(stat="identity",position="stack") + theme_minimal(base_size=18) + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),plot.title = element_text(face="bold",hjust=0.5,size=15)) + ggtitle(label="Virus types in data") +ylab("Proportion of viral reads in category") +xlab("") + theme(axis.text.x = element_text(angle = 45, vjust = 1.3, hjust=1)) +  scale_fill_manual(values=av_colors) + theme(legend.position="none") 
 
-p3a<-  av %>%  filter(grp %in% c("Realm")) %>% ggplot(aes(x=grp, fill=typ)) +   geom_bar() + scale_fill_manual(values=av_colors[which(av$grp %in% c("Realm"))],name="Realm")
-p3c<-  av %>%  filter(grp %in% c("Family")) %>% ggplot(aes(x=grp, fill=typ)) +   geom_bar() + scale_fill_manual(values=av_colors[which(av$grp %in% c("Family"))],name="Family (Mammalian)")
-p3<-plot_grid(p3f, plot_grid( get_legend(p3a), get_legend(p3c), nrow = 2), ncol = 2, rel_widths = c(8,2))
+p3a<-  av %>%  filter(grp %in% c("Realm")) %>% ggplot(aes(x=grp, fill=typ)) +   geom_bar() + scale_fill_manual(values=av_colors[which(av$grp %in% c("Realm"))],name="Realm") + theme(legend.title = element_text(size=16),legend.text = element_text(size=14))
+leg1<-get_legend(p3a)
+p3a<-p3a + theme(legend.position="none")
+p3c<-  av %>%  filter(grp %in% c("Family")) %>% ggplot(aes(x=grp, fill=typ)) +   geom_bar() + scale_fill_manual(values=av_colors[which(av$grp %in% c("Family"))],name="Family (Mammalian)") + theme(legend.title = element_text(size=16),legend.text = element_text(size=14))
+leg2<-get_legend(p3c)
+p3c<-p3c + theme(legend.position="none")
+p3<-plot_grid(p3f, plot_grid( leg1, leg2, nrow = 2), ncol = 2, rel_widths = c(7,3))
 f1 <- arrangeGrob(p3, top = textGrob("A", x = unit(0, "npc"), y   = unit(1, "npc"), just=c("left","top"),gp=gpar(col="black", fontsize=18)))
 
 # B) & C) number of libraries with reads in a given category
