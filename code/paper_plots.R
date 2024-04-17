@@ -113,7 +113,7 @@ p3c<-  av %>%  filter(grp %in% c("Family")) %>% ggplot(aes(x=grp, fill=typ)) +  
 leg2<-get_legend(p3c)
 p3c<-p3c + theme(legend.position="none")
 p3<-plot_grid(p3f, plot_grid( leg1, leg2, nrow = 2), ncol = 2, rel_widths = c(7,3))
-f1 <- arrangeGrob(p3, top = textGrob("A", x = unit(0, "npc"), y   = unit(1, "npc"), just=c("left","top"),gp=gpar(col="black", fontsize=18)))
+f1 <- arrangeGrob(p3, top = textGrob("A", x = unit(0.02, "npc"), y   = unit(0.8, "npc"), just=c("left","top"),gp=gpar(col="black", fontsize=18)))
 
 # B) & C) number of libraries with reads in a given category
 kk3<-ifelse(krk[,-c(1:8,15,20)]>0 ,1,0)
@@ -126,7 +126,7 @@ p1<-
 p2<-
   ggplot(data=av2, aes(x=nams, y=val,fill=nams)) +   geom_bar(stat="identity",position="stack") + theme_minimal(base_size = 18) + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),plot.title = element_text(face="bold",hjust=0.5,size=15)) + ggtitle(label="Libraries with at least 25 virus-assigned read") +ylab("Number of libraries") +xlab("") + theme(axis.text.x = element_text(angle = 45, vjust = 1.1, hjust=1)) +  scale_fill_manual(values=rep("red",nrow(av2))) + theme(legend.position = "none")
 
-f3 <- arrangeGrob(p1, top = textGrob("B", x = unit(0, "npc"), y   = unit(1, "npc"), just=c("left","top"),gp=gpar(col="black", fontsize=18)))
+f3 <- arrangeGrob(p1, top = textGrob("B", x = unit(0, "npc"), y   = unit(0.8, "npc"), just=c("left","top"),gp=gpar(col="black", fontsize=18)))
 f4 <- arrangeGrob(p2, top = textGrob("C", x = unit(0, "npc"), y   = unit(1, "npc"), just=c("left","top"),gp=gpar(col="black", fontsize=18)))
 
 
