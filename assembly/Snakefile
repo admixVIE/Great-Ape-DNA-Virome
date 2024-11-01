@@ -1,0 +1,92 @@
+import os
+from snakemake.utils import min_version
+min_version("6.0")
+#snakemake -R $(snakemake --list-code-changes) --touch -c1
+#configfile:
+#TODO: dummy bai files if bams are empty
+
+
+#(SAMPLES,) = glob_wildcards("../data/dental_calculus/{filename}_1.fastq.gz")
+SAMPLES = ["L1946cap","L1946capPE","L1947cap","L1947capPE","L1948cap","L1948capPE","L1949cap","L1949capPE"]
+
+
+#print(expand("../results/dental_calculus/05b_plass_taxonomy/{sample}_lca.tab", sample = SAMPLES))
+#SAMPLES.remove("test")
+#(PAIRED,) = glob_wildcards("../data/dental_calculus/{filename}_2.fastq.gz")
+#SINGLE = list(set(SAMPLES).difference(set(PAIRED)))
+#SAMPLES = ["ex_blank", "lib_blank"]
+#print(SAMPLES)
+#SAMPLES.remove("G1")
+#print(expand("../results/dental_calculus/07_tables/viruses/{sample}.tab", sample = SAMPLES))
+rule all:
+    input:
+        #inp=expand("../results/{experiment}/01_fastQC/{sample}_{read}_fastqc.html", sample=SAMPLES,read={1,2}, experiment="dental_calculus")
+        #inp=expand("../results/dental_calculus/04_contigs/{sample}.fasta", sample = SAMPLES),
+        #in1=expand("../results/dental_calculus/07_tables/viruses/{sample}.tab", sample = SAMPLES),
+        #in2=expand("../results/dental_calculus/06_vog_map/{sample}.voglin", sample = SAMPLES),
+        #in3=expand("../results/dental_calculus/046_filtered_contigs/{sample}.fasta", sample = SAMPLES),
+        #in1=expand("../results/dental_calculus/07_tables/viruses/G0010_good.tab", sample = SAMPLES),
+        #in2=expand("../results/dental_calculus/07_tables/viruses/G34_bare.tab", sample = SAMPLES),
+        #in2=expand("../results/dental_calculus/07_tables/viruses/G34_bare.good.tab", sample = SAMPLES)
+        #in1=expand("../results/dental_calculus/03_viral_reads/{sample}_1.fastq.gz", sample=SAMPLES)
+        #ingenes="../results/dental_calculus/99_summary/read_stats.pdf"
+        #inp="../results/dental_calculus/07_tables/viruses/test.tab",
+        #coassembly="../results/dental_calculus/05_coassembly/annotated_contigs.tab"
+        #summary_reads="../results/dental_calculus/99_summary/read_summary.tab",
+        #summary_genes="../results/dental_calculus/99_summary/gene_summary.tab",
+        #assembly_stat="../results/dental_calculus/04_contigs_stats/report.tsv",
+        #bwa_stat=expand("../results/dental_calculus/04_bwa_stats/{sample}.stat", sample = SAMPLES),
+        #plass=expand("../results/dental_calculus/04b_plass/{sample}.faa", sample = SAMPLES),
+        ##plass_tax=expand("../results/dental_calculus/05b_plass_taxonomy/{sample}_lca.tab", sample = SAMPLES),
+        ##plass_diamond=expand("../results/dental_calculus/05c_plass_filtered/{sample}.faa", sample = SAMPLES),
+        #plassVOG=expand("../results/dental_calculus/06b_plass_vog/{sample}.m8", sample = SAMPLES),
+        desired=expand("../results/dental_calculus/06c_selected/{sample}_mmseqs.tsv", sample = SAMPLES),
+        plass_summary="../results/dental_calculus/99_summary/plas_genes_summary.tab",
+        #trimmomatic=expand("../results/dental_calculus/02_trimmed_reads/{sample}_1.fastq.gz", sample = ("L1946", "L1947", "L1948amp10", "L1949amp10"))
+
+#Step 1: Quality control of fastq files
+#No need to process all of the samples
+#include: "snakemake_rules/fastqc.smk"
+
+#Step 2: Trimming and adapter removal
+include: "snakemake_rules/trim_reads.smk"
+#Step 3: Extraction of viral and putative viral reads
+include: "snakemake_rules/kraken_extract.smk"
+#Step 4: Two-step assembly of viral reads and mapping reads back to the contigs
+include: "snakemake_rules/assemble.smk"
+include: "snakemake_rules/assemble_single.smk"
+include: "snakemake_rules/plass_assembly.smk"
+#Step 4a: Assembly statistics
+include: "snakemake_rules/quast.smk"
+include: "snakemake_rules/bamtools.smk"
+#Step 4b: remove contamination
+include: "snakemake_rules/mmseqs_filter.smk"
+#Step 5: Predict genes on assembled contigs
+include: "snakemake_rules/predict_genes.smk"
+include: "snakemake_rules/predict_genes_gff.smk"
+include: "snakemake_rules/gene_abundances.smk"
+#Step 5.1: Annotate the contigs of the co-assembly
+include: "snakemake_rules/coassembly_good_contigs.smk"
+#Step 5.2: Taxonomy of the plass assembled proteins
+include: "snakemake_rules/plass_taxonomy.smk"
+#Step 6: BLAST assembled contigs against viral database
+include: "snakemake_rules/blast.smk"
+#Step 7: Diamond search to remove confidentaly non-viral proteins
+include: "snakemake_rules/diamond_filter_search.smk"
+#Step 8: Filter diamond results
+include: "snakemake_rules/diamond_filter_filter.smk"
+include: "snakemake_rules/diamond_filter_extract.smk"
+#Step 8.1: filter plass results with diamond
+include: "snakemake_rules/plass_diamond.smk"
+#Step 9: Map predicted genes to VOGs
+include: "snakemake_rules/mapVOGs.smk"
+include: "snakemake_rules/plass_mapVOG.smk"
+include: "snakemake_rules/plass_desired_taxa.smk"
+#Step 10: Prepare table for import into R
+include: "snakemake_rules/prepare_for_analysis.smk"
+#Step 10: Sequencing and filtering summary table for plotting
+include: "snakemake_rules/data_summary.smk"
+#Step 11: Statistics about the gene loss and read loss during filtering
+include: "snakemake_rules/summarize_genes.smk"
+include: "snakemake_rules/summarize_reads.smk"
+include: "snakemake_rules/plass_summarize.smk"

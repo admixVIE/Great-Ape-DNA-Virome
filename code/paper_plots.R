@@ -23,18 +23,17 @@ specs=c("Chimpanzee","Bonobo","Gorilla","Orangutan")
 spcol=colorRampPalette(c("grey35", "grey75"))(length(specs));names(spcol)<-specs
 fosi=15
 
-##### number of specimens per species
-tonu<-as.data.frame(table(gasp))
-tonu<-data.frame(Species=tonu$gasp, Value=tonu$Freq)
-tonu$Species = factor(tonu$Species, levels=specs)
-tonu<-tonu[order(tonu$Species),]
+##### number of specimens per species (discarded)
+#tonu<-as.data.frame(table(gasp))
+#tonu<-data.frame(Species=tonu$gasp, Value=tonu$Freq)
+#tonu$Species = factor(tonu$Species, levels=specs)
+#tonu<-tonu[order(tonu$Species),]
 
-a0<- tonu %>% ggplot(aes(x=Species, y=Value, fill=Species)) +  geom_bar(stat="identity",position="dodge") +
-  theme_minimal() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),plot.title = element_text(face="bold",hjust=0.5,size=15),axis.text.x = element_text(angle = 45, vjust = 1.3, hjust=1,size=fosi),axis.text.y = element_text(size=fosi),legend.position="none") + ggtitle(label="Libraries per species") +ylab("Number of libraries") +xlab("") + scale_x_discrete(drop=F) + geom_segment(aes(x=0.0,y=0,xend=0.0,yend=85)) +  scale_y_continuous(breaks=c(0,20,40,60,80)) + scale_fill_manual(values=spcol)
+#a0<- tonu %>% ggplot(aes(x=Species, y=Value, fill=Species)) +  geom_bar(stat="identity",position="dodge") +   theme_minimal() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),plot.title = element_text(face="bold",hjust=0.5,size=15),axis.text.x = element_text(angle = 45, vjust = 1.3, hjust=1,size=fosi),axis.text.y = element_text(size=fosi),legend.position="none") + ggtitle(label="Libraries per species") +ylab("Number of libraries") +xlab("") + scale_x_discrete(drop=F) + geom_segment(aes(x=0.0,y=0,xend=0.0,yend=85)) +  scale_y_continuous(breaks=c(0,20,40,60,80)) + scale_fill_manual(values=spcol)
 
-pdf(paste("plots/1_s-number.pdf",sep=""),6,6)
-a0
-dev.off()
+#pdf(paste("plots/1_s-number.pdf",sep=""),6,6)
+#a0
+#dev.off()
 
 
 ## number of reads kept
@@ -48,7 +47,8 @@ bb$Type = factor(bb$Type, levels=c("Raw reads","Reads after trimming","Unique re
 
 c1<-  ggplot(bb) + theme_bw() + geom_violin(mapping=aes(x=Type,y=Value, fill=Type),adjust=1.0,draw_quantiles = c(0.5), scale="width", na.rm=T  ) + geom_jitter(mapping=aes(x=Type,y=Value), height = 0, width = 0.2,na.rm=T,inherit.aes=F) + theme(panel.border = element_blank(),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),plot.background = element_rect(fill = "white"), legend.position="none",axis.ticks.x = element_blank(),axis.text.x = element_text(angle = 45, vjust = 0.9, hjust=1,size=fosi),axis.title.x=element_text(size=fosi), plot.title = element_text(face="bold",hjust=0.5,size=12)) + geom_segment(aes(x=0.0,y=0,xend=0.0,yend=45076183))  + ggtitle(label="Number of reads per library") +xlab("") + ylab("Number of reads")
 
-c2<-  ggplot(bb) + theme_bw() + geom_violin(mapping=aes(x=Type,y=Value, fill=Type),adjust=1.0,draw_quantiles = c(0.5), scale="width", na.rm=T  ) + geom_jitter(mapping=aes(x=Type,y=Value), height = 0, width = 0.2,na.rm=T,inherit.aes=F) + theme(panel.border = element_blank(),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),plot.background = element_rect(fill = "white"), legend.position="none",axis.ticks.x = element_blank(), axis.text.x = element_text(angle = 45, vjust = 0.9, hjust=1,size=fosi),axis.title.x=element_text(size=fosi), plot.title = element_text(face="bold",hjust=0.5,size=12)) + geom_segment(aes(x=0.0,y=0,xend=0.0,yend=4000000))  + ggtitle(label="Number of reads per library (without tail)") +xlab("") + ylab("Number of reads") +  coord_cartesian(ylim = c(0,3819402*1.05))
+##  (discarded)
+#c2<-  ggplot(bb) + theme_bw() + geom_violin(mapping=aes(x=Type,y=Value, fill=Type),adjust=1.0,draw_quantiles = c(0.5), scale="width", na.rm=T  ) + geom_jitter(mapping=aes(x=Type,y=Value), height = 0, width = 0.2,na.rm=T,inherit.aes=F) + theme(panel.border = element_blank(),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),plot.background = element_rect(fill = "white"), legend.position="none",axis.ticks.x = element_blank(), axis.text.x = element_text(angle = 45, vjust = 0.9, hjust=1,size=fosi),axis.title.x=element_text(size=fosi), plot.title = element_text(face="bold",hjust=0.5,size=12)) + geom_segment(aes(x=0.0,y=0,xend=0.0,yend=4000000))  + ggtitle(label="Number of reads per library (without tail)") +xlab("") + ylab("Number of reads") +  coord_cartesian(ylim = c(0,3819402*1.05))
 
 
 ###### number of reads assigned to domains
@@ -63,15 +63,16 @@ ac$Value<-log(ac$Value)
 # percentage
 b1<-  ggplot(aa) + theme_bw() + geom_violin(mapping=aes(x=Type,y=Value, fill=Type),adjust=1.0,draw_quantiles = c(0.5), scale="width", na.rm=T  ) + geom_jitter(mapping=aes(x=Type,y=Value), height = 0, width = 0.2,na.rm=T,inherit.aes=F) + theme(panel.border = element_blank(),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),plot.background = element_rect(fill = "white"), legend.position="none",axis.ticks.x = element_blank(),axis.text.x = element_text(angle = 45, vjust = 1, hjust=1,size=fosi), axis.title.x=element_text(size=fosi), plot.title = element_text(face="bold",hjust=0.5,size=12)) + geom_segment(aes(x=0.0,y=0,xend=0.0,yend=100))  + ggtitle(label="Percentage of assigned reads") +xlab("") + ylab("Abundance per library (%)")
 
-# number
-b2<-  ggplot(ab) + theme_bw() + geom_violin(mapping=aes(x=Type,y=Value, fill=Type),adjust=1.0,draw_quantiles = c(0.5), scale="width", na.rm=T  ) + geom_jitter(mapping=aes(x=Type,y=Value), height = 0, width = 0.2,na.rm=T,inherit.aes=F) + theme(panel.border = element_blank(),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),plot.background = element_rect(fill = "white"), legend.position="none",axis.ticks.x = element_blank(),axis.text.x = element_text(angle = 45, vjust = 1, hjust=1,size=fosi),axis.title.x=element_text(size=fosi), plot.title = element_text(face="bold",hjust=0.5,size=12)) + geom_segment(aes(x=0.0,y=0,xend=0.0,yend=8000000))  + ggtitle(label="Number of assigned reads") +xlab("") + ylab("Abundance per library")
+## number  (discarded)
+#b2<-  ggplot(ab) + theme_bw() + geom_violin(mapping=aes(x=Type,y=Value, fill=Type),adjust=1.0,draw_quantiles = c(0.5), scale="width", na.rm=T  ) + geom_jitter(mapping=aes(x=Type,y=Value), height = 0, width = 0.2,na.rm=T,inherit.aes=F) + theme(panel.border = element_blank(),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),plot.background = element_rect(fill = "white"), legend.position="none",axis.ticks.x = element_blank(),axis.text.x = element_text(angle = 45, vjust = 1, hjust=1,size=fosi),axis.title.x=element_text(size=fosi), plot.title = element_text(face="bold",hjust=0.5,size=12)) + geom_segment(aes(x=0.0,y=0,xend=0.0,yend=8000000))  + ggtitle(label="Number of assigned reads") +xlab("") + ylab("Abundance per library")
 
-# log number
-b3<-  ggplot(ac) + theme_bw() + geom_violin(mapping=aes(x=Type,y=Value, fill=Type),adjust=1.0,draw_quantiles = c(0.5), scale="width", na.rm=T  ) + geom_jitter(mapping=aes(x=Type,y=Value), height = 0, width = 0.2,na.rm=T,inherit.aes=F) + theme(panel.border = element_blank(),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),plot.background = element_rect(fill = "white"), legend.position="none",axis.ticks.x = element_blank(), axis.text.x = element_text(angle = 45, vjust = 1, hjust=1,size=fosi),axis.title.x=element_text(size=fosi), plot.title = element_text(face="bold",hjust=0.5,size=12))+  geom_segment(aes(x=0.0,y=0,xend=0.0,yend=17))  + ggtitle(label="Number of assigned reads") +xlab("") + ylab("Abundance per library (log-scale)")
+## log number  (discarded)
+#b3<-  ggplot(ac) + theme_bw() + geom_violin(mapping=aes(x=Type,y=Value, fill=Type),adjust=1.0,draw_quantiles = c(0.5), scale="width", na.rm=T  ) + geom_jitter(mapping=aes(x=Type,y=Value), height = 0, width = 0.2,na.rm=T,inherit.aes=F) + theme(panel.border = element_blank(),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),plot.background = element_rect(fill = "white"), legend.position="none",axis.ticks.x = element_blank(), axis.text.x = element_text(angle = 45, vjust = 1, hjust=1,size=fosi),axis.title.x=element_text(size=fosi), plot.title = element_text(face="bold",hjust=0.5,size=12))+  geom_segment(aes(x=0.0,y=0,xend=0.0,yend=17))  + ggtitle(label="Number of assigned reads") +xlab("") + ylab("Abundance per library (log-scale)")
 
 #plot
-pdf(paste("plots/2_read_numbers.pdf",sep=""),9,9)
-(c1 | c2 )  / ( b2 | b3 | b1 ) + plot_annotation(tag_levels = "A") 
+pdf(paste("plots/1_read_numbers.pdf",sep=""),8,4)
+#(c1 | c2 )  / ( b2 | b3 | b1 ) + plot_annotation(tag_levels = "A") 
+(c1 | b1 )  + plot_annotation(tag_levels = "A") 
 dev.off()
 
 
@@ -130,7 +131,80 @@ f3 <- arrangeGrob(p1, top = textGrob("B", x = unit(0, "npc"), y   = unit(0.8, "n
 f4 <- arrangeGrob(p2, top = textGrob("C", x = unit(0, "npc"), y   = unit(1, "npc"), just=c("left","top"),gp=gpar(col="black", fontsize=18)))
 
 
-pdf(paste("plots/3-abundance.pdf",sep=""),12,8)
+pdf(paste("plots/2-abundance.pdf",sep=""),12,8)
 grid.arrange(f1,arrangeGrob(f3,f4, nrow = 2),
  ncol = 2,widths=c(1,0.9))         
 dev.off()
+
+
+##Figure 3 DNA Virus capture paper
+
+# Load necessary libraries
+library(ggplot2)
+library(reshape2)
+
+df_melted <- melt(df_updated_07_10_24_, id.vars = "Library")
+
+
+# Define custom color scale with more steps
+custom_colors <- c("white", colorRampPalette(c("yellow", "red"))(9), "red")
+
+# Define custom key values
+key_values <- c(25, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500)
+
+df_melted$variable <- factor(df_melted$variable, levels = sort(unique(df_melted$variable)))
+df_melted$Library <- factor(df_melted$Library, levels = unique(df_updated_07_10_24_$Library))
+
+
+# Custom theme adjustments
+custom_theme <- theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 50, hjust = 1, size = 16),  
+    axis.text.y = element_text(size = 16), 
+    axis.title.x = element_text(size = 17),  
+    axis.title.y = element_text(size = 17),  
+    panel.grid.major.y = element_line(color = "lightgrey", linetype = "dashed"), 
+    panel.grid.major.x = element_blank(), 
+    panel.grid.minor = element_blank(), 
+    legend.position = "bottom", 
+    legend.box = "vertical", 
+    legend.key.width = unit(20, "cm"),  
+    legend.key.height = unit(4, "cm"), 
+    legend.title = element_text(size = 14),  
+    legend.text = element_text(size = 10),
+  )
+
+# Create vertical lines to divide genera
+vertical_lines <- list(
+  geom_vline(xintercept = 9.5, color = "black", linetype = "dashed", size = 0.3),  # Line between Gorilla and Pan
+  geom_vline(xintercept = 24.5, color = "black", linetype = "dashed", size = 0.3)  # Line between Pan and Pongo
+)
+
+# Create horizontal lines for each genus group below x-axis labels
+horizontal_lines <- list(
+  geom_segment(aes(x = 1, xend = 9, y = -0.55, yend = -0.55), color = "black", size = 1),  # Line for Gorilla
+  geom_segment(aes(x = 10, xend = 24, y = -0.55, yend = -0.55), color = "black", size = 1),  # Line for Pan
+  geom_segment(aes(x = 25, xend = 30, y = -0.55, yend = -0.55), color = "black", size = 1)  # Line for Pongo
+)
+
+# Add labels for genus groups
+genus_labels <- list(
+  annotate("text", x = 5, y = -0.001, label = "Gorilla", size = 7, color = "black", vjust = 1),
+  annotate("text", x = 17, y = -0.001, label = "Pan", size = 7, color = "black", vjust = 1),
+  annotate("text", x = 27.5, y = -0.001, label = "Pongo", size = 7, color = "black", vjust = 1)
+)
+
+# Plot the heatmap
+ggplot(df_melted, aes(x = Library, y = variable, fill = value)) +
+  geom_tile(color = "darkgrey") +  
+  scale_fill_gradientn(colors = custom_colors, limits = c(25, 500), na.value = "white", oob = scales::squish,
+                       breaks = key_values, labels = key_values) +
+  custom_theme +  # Apply custom theme
+  labs(x = "Samples", y = "Viral Species", fill = "Number Fragments") +  
+  guides(fill = guide_colorbar(title.position = "top", title.hjust = 0.5,
+                               barwidth = 15, barheight = 1)) +
+  vertical_lines +  
+  horizontal_lines +  
+  genus_labels +  
+  coord_cartesian(clip = "off")  
+
